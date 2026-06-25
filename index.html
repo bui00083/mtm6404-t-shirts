@@ -3,10 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    h1{
+      font-size: 50px;
+      font-weight: 500;
+      margin: 10px;
+    }
+
+    .item{
+      display: flex;
+      flex-direction: column;
+      margin: 15px;
+      border-style: outset;
+      border: solid black 1px;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+
+    button{
+      display: block;
+      padding: 10px;
+      background-color:rgb(14, 16, 16);
+      color: white;
+      width: 100%;
+    }
+
+    .items{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: white;
+      padding: 15px;
+      gap: 20px;
+      row-gap: 50px; 
+    }
+
+    h2{
+      font-weight: 600;
+      font-size: larger;
+    }
+
+    .price{
+      font-size: 25px;
+    }
+
+    .alert{
+      color: brown;
+      font-size: 18px;
+    }
+    
+  </style>
   <title>T-Shirts</title>
 </head>
 <body>
   
-  
+  <div id="root"></div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@19",
+        "react-dom/client": "https://esm.sh/react-dom@19/client",
+        "react/jsx-runtime": "https://esm.sh/react@19/jsx-runtime"
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel" data-type="module" src="./t-shirts.js"></script>
+
 </body>
 </html>
